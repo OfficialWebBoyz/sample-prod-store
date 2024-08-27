@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"pnpm run server:dev\" \"pnpm run client:dev\"",
+    "dev": "concurrently --timestampFormat pppp --names \"SERVER 💾,CLIENT 💻\" -c \"magentaBright.bold,cyanBright.bold\" \"pnpm run server:dev\" \"pnpm run client:dev\"",
     "dev-up": "pnpm run server:dev-up && pnpm run client:dev-up",
     "server:dev-up": "cd server && pnpm i",
     "client:dev-up": "cd client && pnpm i",
@@ -14,7 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^8.2.2"
   }
 }
